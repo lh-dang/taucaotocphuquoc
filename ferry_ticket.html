@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phu Quoc Ferry &amp; Boat Tickets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#004370",
+                        "surface-container-highest": "#e2e2e5",
+                        "secondary": "#645e49",
+                        "secondary-fixed-dim": "#cec6ad",
+                        "on-primary-container": "#abd2ff",
+                        "outline-variant": "#c1c7d1",
+                        "tertiary-fixed-dim": "#ffb68d",
+                        "surface-variant": "#e2e2e5",
+                        "surface-container-low": "#f3f3f6",
+                        "primary-fixed-dim": "#9ccaff",
+                        "on-tertiary-fixed": "#331200",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001d35",
+                        "on-secondary-fixed-variant": "#4c4733",
+                        "tertiary-fixed": "#ffdbc9",
+                        "surface": "#f9f9fc",
+                        "tertiary": "#6c2e00",
+                        "secondary-container": "#e8dfc5",
+                        "primary-fixed": "#d0e4ff",
+                        "on-surface": "#1a1c1e",
+                        "outline": "#717781",
+                        "inverse-primary": "#9ccaff",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "secondary-fixed": "#ebe2c8",
+                        "on-secondary-container": "#68634d",
+                        "on-tertiary-container": "#ffc09d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3133",
+                        "on-primary-fixed-variant": "#00497a",
+                        "on-background": "#1a1c1e",
+                        "surface-container": "#eeeef0",
+                        "surface-bright": "#f9f9fc",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "surface-tint": "#12629d",
+                        "background": "#f9f9fc",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#005b96",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1f1c0b",
+                        "on-surface-variant": "#414750",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "tertiary-container": "#904000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Serif", "serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Noto Serif", "serif"],
+                        "display-lg": ["Noto Serif", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm">
+<div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+<a class="text-2xl font-bold text-sky-800 dark:text-sky-400 font-serif flex flex-col items-start" href="#">
+<span>Phu Quoc Travel</span>
+</a>
+<div class="hidden md:flex space-x-6 items-center">
+<a class="font-serif group flex flex-col items-center justify-center transition-all duration-300 active:scale-95 px-3 py-1 rounded-md border-b-2 border-orange-500" href="#">
+<span class="text-base font-medium text-slate-700 dark:text-slate-300 group-hover:text-sky-700">Vé Tàu</span>
+<span class="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-sky-600">Ferry Tickets</span>
+</a>
+<a class="font-serif group flex flex-col items-center justify-center transition-all duration-300 active:scale-95 px-3 py-1 rounded-md" href="#">
+<span class="text-base font-medium text-slate-700 dark:text-slate-300 group-hover:text-sky-700">Thuê Xe</span>
+<span class="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-sky-600">Vehicle Rental</span>
+</a>
+<a class="font-serif group flex flex-col items-center justify-center transition-all duration-300 active:scale-95 px-3 py-1 rounded-md" href="#">
+<span class="text-base font-medium text-slate-700 dark:text-slate-300 group-hover:text-sky-700">Cẩm Nang</span>
+<span class="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-sky-600">Travel Guide</span>
+</a>
+<a class="font-serif group flex flex-col items-center justify-center transition-all duration-300 active:scale-95 px-3 py-1 rounded-md" href="#">
+<span class="text-base font-medium text-slate-700 dark:text-slate-300 group-hover:text-sky-700">Liên Hệ</span>
+<span class="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-sky-600">Contact Us</span>
+</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-serif flex flex-col items-center justify-center group active:scale-95 transition-transform px-2 py-1 mr-2 border-r border-slate-200 dark:border-slate-700 pr-4">
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-sky-700">VN / EN</span>
+</button>
+<button class="font-serif flex flex-col items-center justify-center bg-orange-500 text-white hover:bg-orange-600 active:scale-95 transition-transform px-6 py-2 rounded-full shadow-md">
+<span class="text-sm font-semibold">Đặt Ngay</span>
+<span class="text-[10px] opacity-80 font-medium">Book Now</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[614px] min-h-[400px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern high-speed ferry boat cutting through turquoise waters towards a lush green tropical island under a bright blue sky with fluffy clouds" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7e-PvW3MQJT7JxB7NHPnCtUwfUekNRNCkY-sEGvaPKlt-V6UTZJUlNhFhYW5h0i4GzSUEBGkG8IVVx6FahRaSVdc2Q9Cwz57QenZL7QRjxBUyP1K5OyEmXtGu6pi5Y8beCirG4D2QcmNNVh05gXNf8fUAaqsnsRYiScdYcyEUy4B0L7bRvBrqUIW2F7dCISj4jQXYHPqLOOFPLNZaPEHrNepTMdKpRG-CKBAIcnQVq1Nxyh2WiEft86JodRFhaN7eD_5o6wdyrj0x"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="font-display-lg text-display-lg text-white mb-1 text-shadow-md font-extrabold">Tàu Cao Tốc Đi Phú Quốc</h1>
+<h2 class="font-headline-lg text-headline-lg text-white/90 mb-6 text-shadow-md opacity-70 text-2xl font-normal">High-Speed Ferry to Phu Quoc</h2>
+<div class="mb-8">
+<p class="font-body-lg text-body-lg text-white/90 mb-1 max-w-2xl mx-auto">Trải nghiệm kết nối trực tiếp với các hãng tàu hàng đầu. Tìm giá tốt nhất và đặt vé dễ dàng.</p>
+<p class="font-body-md text-sm text-white/70 max-w-2xl mx-auto">Direct connections with top-tier operators. Find the best prices and secure your tickets for a smooth journey.</p>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-gutter py-section-gap">
+<!-- Search & Filter Widget -->
+<!-- Pricing Information -->
+<section class="mb-section-gap">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1 font-extrabold">Giá Vé</h2>
+<h3 class="font-headline-md text-sm text-on-surface-variant mb-6 font-normal uppercase tracking-widest opacity-70">Ticket Fares</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-1">Giá vé tiêu chuẩn cho tất cả các hãng. Giá có thể thay đổi nhẹ vào các dịp lễ tết.</p>
+<p class="text-sm text-on-surface-variant/70 max-w-2xl mx-auto">Standard pricing across all major operators. Prices may vary slightly during peak holiday seasons.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Adult Card -->
+<div class="bg-surface rounded-xl p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface flex flex-col font-bold">
+<span>Người Lớn</span>
+<span class="text-sm font-normal text-on-surface-variant/70">Adults</span>
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex flex-col">
+<span>Tuổi 12 - 59</span>
+<span class="text-[10px] opacity-70">Ages 12 - 59</span>
+</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Rạch Giá</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Rach Gia Route</span>
+</div>
+<span class="font-label-md text-label-md text-primary">340,000 VND</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Hà Tiên</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Ha Tien Route</span>
+</div>
+<span class="font-label-md text-label-md text-primary">230,000 VND</span>
+</div>
+</div>
+</div>
+<!-- Child Card -->
+<div class="bg-surface rounded-xl p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary"></div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="child_care">child_care</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface flex flex-col font-bold">
+<span>Trẻ Em</span>
+<span class="text-sm font-normal text-on-surface-variant/70">Children</span>
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex flex-col">
+<span>Tuổi 6 - 11</span>
+<span class="text-[10px] opacity-70">Ages 6 - 11</span>
+</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Rạch Giá</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Rach Gia Route</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary">250,000 VND</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Hà Tiên</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Ha Tien Route</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary">160,000 VND</span>
+</div>
+</div>
+</div>
+<!-- Senior Card -->
+<div class="bg-surface rounded-xl p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="elderly">elderly</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface flex flex-col font-bold">
+<span>Cao Tuổi</span>
+<span class="text-sm font-normal text-on-surface-variant/70">Seniors</span>
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex flex-col">
+<span>Tuổi 60+</span>
+<span class="text-[10px] opacity-70">Ages 60+</span>
+</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Rạch Giá</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Rach Gia Route</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">290,000 VND</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Tuyến Hà Tiên</span>
+<span class="text-[10px] text-on-surface-variant opacity-70">Ha Tien Route</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">195,000 VND</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedules Table -->
+<section class="mb-section-gap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1 font-extrabold">Lịch Trình Khởi Hành Mỗi Ngày</h2>
+<h3 class="font-headline-md text-sm text-on-surface-variant mb-8 font-normal uppercase tracking-widest opacity-70">Daily Departures</h3>
+<div class="bg-surface border border-surface-container-highest rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-container-highest">
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+<div class="flex flex-col">
+<span>Hãng</span>
+<span class="text-[10px] font-normal opacity-70">Operator</span>
+</div>
+</th>
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+<div class="flex flex-col">
+<span>Tuyến</span>
+<span class="text-[10px] font-normal opacity-70">Route</span>
+</div>
+</th>
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+<div class="flex flex-col">
+<span>Đi</span>
+<span class="text-[10px] font-normal opacity-70">Departure</span>
+</div>
+</th>
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+<div class="flex flex-col">
+<span>Đến</span>
+<span class="text-[10px] font-normal opacity-70">Arrival</span>
+</div>
+</th>
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+<div class="flex flex-col">
+<span>Thời Gian</span>
+<span class="text-[10px] font-normal opacity-70">Duration</span>
+</div>
+</th>
+<th class="py-5 px-6 font-label-md text-label-md text-on-surface-variant text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span>Hành Động</span>
+<span class="text-[10px] font-normal opacity-70">Action</span>
+</div>
+</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="border-b border-surface-container-high hover:bg-white hover:shadow-md transition-all duration-300">
+<td class="py-6 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-red-100 text-red-700 flex items-center justify-center font-bold text-xs">PQE</div>
+<span class="font-medium whitespace-nowrap">Phu Quoc Express</span>
+</div>
+</td>
+<td class="py-6 px-6 whitespace-nowrap">Rạch Giá <span class="material-symbols-outlined text-[16px] align-middle mx-1" data-icon="arrow_forward">arrow_forward</span> Phú Quốc</td>
+<td class="py-6 px-6 font-medium whitespace-nowrap">07:20 AM</td>
+<td class="py-6 px-6 whitespace-nowrap">09:40 AM</td>
+<td class="py-6 px-6 text-on-surface-variant whitespace-nowrap">2h 20m</td>
+<td class="py-6 px-6 text-right">
+<button class="font-label-md text-label-md text-primary border border-primary/30 hover:bg-primary/5 px-4 py-1.5 rounded-lg transition-colors flex flex-col items-center ml-auto leading-tight">
+<span>Đặt Vé</span>
+<span class="text-[10px] font-normal opacity-70">Book</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-surface-container-high hover:bg-white hover:shadow-md transition-all duration-300">
+<td class="py-6 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">SD</div>
+<span class="font-medium whitespace-nowrap">Superdong</span>
+</div>
+</td>
+<td class="py-6 px-6 whitespace-nowrap">Hà Tiên <span class="material-symbols-outlined text-[16px] align-middle mx-1" data-icon="arrow_forward">arrow_forward</span> Phú Quốc</td>
+<td class="py-6 px-6 font-medium whitespace-nowrap">08:00 AM</td>
+<td class="py-6 px-6 whitespace-nowrap">09:15 AM</td>
+<td class="py-6 px-6 text-on-surface-variant whitespace-nowrap">1h 15m</td>
+<td class="py-6 px-6 text-right">
+<button class="font-label-md text-label-md text-primary border border-primary/30 hover:bg-primary/5 px-4 py-1.5 rounded-lg transition-colors flex flex-col items-center ml-auto leading-tight">
+<span>Đặt Vé</span>
+<span class="text-[10px] font-normal opacity-70">Book</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-surface-container-high hover:bg-white hover:shadow-md transition-all duration-300">
+<td class="py-6 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-red-100 text-red-700 flex items-center justify-center font-bold text-xs">PQE</div>
+<span class="font-medium whitespace-nowrap">Phu Quoc Express</span>
+</div>
+</td>
+<td class="py-6 px-6 whitespace-nowrap">Rạch Giá <span class="material-symbols-outlined text-[16px] align-middle mx-1" data-icon="arrow_forward">arrow_forward</span> Phú Quốc</td>
+<td class="py-6 px-6 font-medium whitespace-nowrap">11:00 AM</td>
+<td class="py-6 px-6 whitespace-nowrap">13:20 PM</td>
+<td class="py-6 px-6 text-on-surface-variant whitespace-nowrap">2h 20m</td>
+<td class="py-6 px-6 text-right">
+<button class="font-label-md text-label-md text-primary border border-primary/30 hover:bg-primary/5 px-4 py-1.5 rounded-lg transition-colors flex flex-col items-center ml-auto leading-tight">
+<span>Đặt Vé</span>
+<span class="text-[10px] font-normal opacity-70">Book</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="bg-primary-container rounded-2xl p-10 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container mb-1 font-extrabold">Cần Hỗ Trợ Đặt Vé?</h2>
+<h3 class="font-headline-md text-sm text-on-primary-container/70 mb-6 font-normal uppercase tracking-widest">Need Help Booking?</h3>
+<div class="mb-8">
+<p class="font-body-lg text-body-lg text-on-primary-container/90 mb-1 max-w-xl mx-auto">Các chuyên gia địa phương có thể giúp bạn sắp xếp vé tàu, đưa đón và chỗ ở cho một chuyến đi suôn sẻ.</p>
+<p class="font-body-md text-sm text-on-primary-container/70 max-w-xl mx-auto">Our local experts can help you arrange ferry tickets, transfers, and accommodations for a seamless trip.</p>
+</div>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="font-label-md text-label-md bg-on-primary-container text-primary-container hover:bg-white px-8 py-3 rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                    Gọi / Call +84 123 456 789
+                </button>
+<button class="font-label-md text-label-md bg-transparent border-2 border-on-primary-container/30 text-on-primary-container hover:bg-on-primary-container/10 px-8 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    WhatsApp Us
+                </button>
+</div>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="text-xl font-bold text-sky-800 dark:text-sky-400 font-serif">
+                Phu Quoc Travel
+            </div>
+<p class="font-serif text-sm text-slate-500 dark:text-slate-500">
+                © 2024 Phu Quoc Premium Travel Services. All rights reserved.
+            </p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+<a class="font-serif text-sm text-slate-500 dark:text-slate-500 hover:text-sky-600 hover:underline decoration-orange-500 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span>Điều Khoản</span>
+<span class="text-[10px] opacity-70">Terms of Service</span>
+</a>
+<a class="font-serif text-sm text-slate-500 dark:text-slate-500 hover:text-sky-600 hover:underline decoration-orange-500 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span>Chính Sách</span>
+<span class="text-[10px] opacity-70">Privacy Policy</span>
+</a>
+<a class="font-serif text-sm text-sky-700 dark:text-sky-300 font-bold hover:underline decoration-orange-500 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span>Lịch Trình Tàu</span>
+<span class="text-[10px] opacity-70 font-normal">Ferry Schedules</span>
+</a>
+<a class="font-serif text-sm text-slate-500 dark:text-slate-500 hover:text-sky-600 hover:underline decoration-orange-500 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span>Đối Tác Đăng Nhập</span>
+<span class="text-[10px] opacity-70">Partner Login</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
