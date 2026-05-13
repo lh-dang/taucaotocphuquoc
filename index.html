@@ -10,6 +10,33 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        
+        #headerCarousel {
+            transition: background-image 1.5s ease-in-out;
+        }
+        
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 20;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: rgba(255, 255, 255, 1);
+        }
     </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -133,8 +160,9 @@
 </div>
 </div>
 </nav>
-<header class="relative min-h-[600px] flex items-center pt-20 bg-cover bg-center" data-alt="aerial view of pristine white sand beach meeting crystal clear turquoise waters in Phu Quoc at midday" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5y41fhLLWqoqSDg1oItdijcMZ4kFWFWYeJiuh8PJcwHH4uQxOp4xj8tefwdHRb2LtSDUeAhspyWQ5RGbBTv0gojCuZ0WsrHEEnHeskQ3vW41H_xzftUHNJ3nafl2pmmHbtEdntLgslgv8PRd-McrMRlRUWHnzD0YtTX8Q3h3IQ2ucCYEvDMjNlWMQgHybNfJo419ikQ3J6rKjUBRUxYKN4lFAQ5jwBle0syTudbv0fZPjADCo1ohbqECeVw_5HTXmfCtC8DjMzn-K');">
+<header id="headerCarousel" class="relative min-h-[600px] flex items-center pt-20 bg-cover bg-center" data-alt="aerial view of pristine white sand beach meeting crystal clear turquoise waters in Phu Quoc at midday" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5y41fhLLWqoqSDg1oItdijcMZ4kFWFWYeJiuh8PJcwHH4uQxOp4xj8tefwdHRb2LtSDUeAhspyWQ5RGbBTv0gojCuZ0WsrHEEnHeskQ3vW41H_xzftUHNJ3nafl2pmmHbtEdntLgslgv8PRd-McrMRlRUWHnzD0YtTX8Q3h3IQ2ucCYEvDMjNlWMQgHybNfJo419ikQ3J6rKjUBRUxYKN4lFAQ5jwBle0syTudbv0fZPjADCo1ohbqECeVw_5HTXmfCtC8DjMzn-K');">
 <div class="absolute inset-0 bg-black/40"></div>
+<div class="carousel-dots" id="carouselDots"></div>
 <div class="relative z-10 w-full max-w-container-max mx-auto px-gutter py-12 flex flex-col items-center text-center">
 <div class="max-w-3xl">
 <h1 class="font-display-lg text-display-lg text-on-primary mb-6 drop-shadow-lg flex flex-col items-center"><span>Khám Phá Đảo Ngọc Phú Quốc</span>
@@ -165,7 +193,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 <div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow border border-outline-variant overflow-hidden group">
-<div class="h-64 bg-cover bg-center overflow-hidden" data-alt="modern fast ferry boat cutting through vibrant blue ocean waves on a sunny day" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4uoPlb_j5aoqHRWw7f2MlySLflFwvzfOb3IgkdNI5hpKxRQRWKHf37dRtoLnKSdfkTdOXqjogwo0GhtlhB3LABB40mLConjs0rujOhGtTXf4iwklQyVegpTOIPYpMok4pTtWCYiwvB2uEmlO0H4Uxe7Q-ysgUovHBifECKsF-hh0tj2_8KjNXI1ZtuZRemVswthaConQe673WSmOuD4ps9hW1OBlYTuApWIAoL4fMC5j4tB6XgZLcr4vmJfNt7a0fxukDpPpakxI_');">
+<div class="h-64 bg-cover bg-center overflow-hidden" data-alt="modern fast ferry boat cutting through vibrant blue ocean waves on a sunny day" style="background-image: url('images/ferry/superdong.png');">
 <div class="p-4 flex justify-end">
 <span class="bg-primary/90 text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full backdrop-blur-sm">Superdong Fast Ferry</span>
 </div>
@@ -192,7 +220,7 @@
 </div>
 </div>
 <div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow border border-outline-variant overflow-hidden group">
-<div class="h-64 bg-cover bg-center overflow-hidden" data-alt="large passenger catamaran ferry docked at a bustling coastal port with calm waters" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA94d85G2PU89NQnNzQJtjk-zY0t_mNOKBb0ZcRv9L7VnViLWZZtJcg5RQzqj6RGvf-k06TGLF1L5ERsJTf7LCQXdJD0p0Nm2qU7xVsfWoVffwXinS90Kpzowzih1PAbAcRsdHdTSmdJXgnhUzSaOmR5_JVnsTWFqpks2rTKOCFjnUvzgi2mw_G-moZFDT7sN44HCkCfUNsEqWXEvsLonNb1wdclet30VZneJ_vFphbwMYjeEyQSYKCBjUChRFBiSeZ4dnQ1ff5zeYC');">
+<div class="h-64 bg-cover bg-center overflow-hidden" data-alt="large passenger catamaran ferry docked at a bustling coastal port with calm waters" style="background-image: url('images/ferry/express_3.jpg');">
 <div class="p-4 flex justify-end">
 <span class="bg-primary/90 text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full backdrop-blur-sm">Phu Quoc Express</span>
 </div>
@@ -331,4 +359,64 @@
 </div>
 </div>
 </footer>
+
+<script>
+    // Carousel images
+    const carouselImages = [
+        'images/travel/Discover the Beauty of Phú Quốc.jpg',
+        'images/travel/Phu Quoc Island_ A Laid back, Leisure Getaway.jpg',
+        'images/travel/Phu Quôc, Ghost City.jpg',
+        'images/travel/Sunset Phu Quoc.jpg',
+        'images/travel/Phú Quốc Island, Vietnam.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const headerCarousel = document.getElementById('headerCarousel');
+    const carouselDotsContainer = document.getElementById('carouselDots');
+
+    // Create dots
+    function createDots() {
+        carouselDotsContainer.innerHTML = '';
+        carouselImages.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = `dot ${index === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => goToImage(index));
+            carouselDotsContainer.appendChild(dot);
+        });
+    }
+
+    // Update dots
+    function updateDots() {
+        const dots = carouselDotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentImageIndex);
+        });
+    }
+
+    // Go to specific image
+    function goToImage(index) {
+        currentImageIndex = index;
+        headerCarousel.style.backgroundImage = `url('${carouselImages[currentImageIndex]}')`;
+        updateDots();
+    }
+
+    // Change to next image
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+        goToImage(currentImageIndex);
+    }
+
+    // Initialize carousel
+    function initCarousel() {
+        createDots();
+        setInterval(nextImage, 6000); // Change image every 6 seconds
+    }
+
+    // Start carousel when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+        initCarousel();
+    }
+</script>
 </body></html>
